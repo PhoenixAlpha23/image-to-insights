@@ -24,9 +24,9 @@ if before_img and after_img:
     st.subheader("📦 Detected Changes (YOLOv8)")
     col1, col2 = st.columns(2)
     with col1:
-        st.image(before_annotated, caption="Before", use_column_width=True)
+        st.image(before_annotated, caption="Before", use_container_width=True)
     with col2:
-        st.image(after_annotated, caption="After", use_column_width=True)
+        st.image(after_annotated, caption="After", use_container_width=True)
     
     with st.spinner("Analyzing differences..."):
         diff_description = compare_detections(before_objects, after_objects)
