@@ -5,3 +5,5 @@ Pillow
 langchain
 groq
 python-dotenv
+torch
+numpy
