@@ -4,8 +4,8 @@ streamlit
 Pillow
 langchain
 groq
-python-dotenv
 torch
+torchvision
 numpy
 langchain
 langchain-groq
