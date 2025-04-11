@@ -3,7 +3,7 @@ import requests
 from langchain.llms.base import LLM
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
-
+from typing import Optional, List
 
 class GroqLLM(LLM):
     model: str = "gemma2-9b-it"
