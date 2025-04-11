@@ -61,7 +61,11 @@ The following screenshot shows the web interface built using Streamlit:
 2. Install required dependencies:
    ```bash
    pip install -r requirements.txt
-3. Run the application:
+3. **Set Up Groq API Key* Before running the app, export your Groq API key as an environment variable:
+   ```bash
+   export GROQ_API_KEY=your_api_key_here
+
+4. Run the application:
    ```bash
    streamlit run app.py
   
