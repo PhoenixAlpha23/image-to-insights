@@ -7,7 +7,9 @@ model = YOLO("yolov8s.pt")
 def detect_objects(pil_image):
     """
     Runs YOLOv8 on a PIL image and returns detected objects.
-    Returns: list of dicts with class name, confidence, and bounding box
+    Returns: 
+    - List of dicts with class name, confidence, and bounding box
+    - Annotated image     
     """
     # Convert PIL to np.array
     img_array = np.array(pil_image.convert("RGB"))
@@ -29,5 +31,7 @@ def detect_objects(pil_image):
                 "confidence": conf,
                 "box": [x1, y1, x2, y2]
             })
-    
-    return objects
+
+    annotated_array = results[0].plot()
+    annotated_image = Image.fromarray(annotated_array)
+    return objects,annotated_image
